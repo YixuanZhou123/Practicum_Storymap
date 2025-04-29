@@ -17,9 +17,8 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
-        cache: 'npm'
+        # cache: 'npm' 
     - name: Install dependencies
       run: npm install --only=dev
     - name: Run stylelint
-      run: |
-        # npx stylelint --color  "./**/*.css"
+      run: npx stylelint --color "./**/*.css"
